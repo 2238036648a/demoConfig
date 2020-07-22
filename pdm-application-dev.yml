@@ -1,29 +1,32 @@
 server:
   port: 8763
-
 spring:
   redis:
     host: localhost
     database: 0
     port: 6379
   datasource:
-    name: mysql
-    url: jdbc:mysql://localhost:3306/7project?ullNamePatternMatchesAll=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/7project?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
+    druid:
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+    driver-class-name: com.mysql.cj.jdbc.Driver
   freemarker:
-    allow-request-override: false
     cache: false
-    check-template-location: true
     charset: UTF-8
-    suffix: .ftl
-    templateLoaderPath: classpath:/templates/
+    allow-request-override: false
+    check-template-location: true
     content-type: text/html
     expose-request-attributes: true
-
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    allow-session-override: true
 
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
- 
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:/mapper/*.xml
+ # type-aliases-package: com.mr.mradmin.entity
