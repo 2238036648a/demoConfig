@@ -10,3 +10,12 @@ spring:
     url: jdbc:mysql://localhost:3306/7project?ullNamePatternMatchesAll=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
     password: root
+  freemarker:
+    allow-request-override: false
+    cache: false
+    check-template-location: true
+    charset: UTF-8
+    suffix: .ftl
+    templateLoaderPath: classpath:/templates/
+    content-type: text/html
+    expose-request-attributes: truerd: root
