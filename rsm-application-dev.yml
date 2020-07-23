@@ -11,4 +11,4 @@ spring:
     templateLoaderPath: classpath:/templates/
     content-type: text/html
     expose-request-attributes: true
-    expose-session-attributes: true
+  
