@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: rsm
   freemarker:
     allow-request-override: false
     cache: false
