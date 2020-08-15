@@ -1,8 +1,5 @@
 server:
   port: 8763
-rocketmq:
-  servername: localhost:9876
-  defaultname: storageCoupon
 spring:
   redis:
     host: localhost
