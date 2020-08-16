@@ -22,6 +22,15 @@ spring:
         #最小等待连接中的数量,设 0 为没有限制
         min-idle: 0
   datasource:
+    hikari:
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-timeout: 600000
+      maximum-pool-size: 500
+      max-lifetime: 1800000
+      minimum-idle: 20
+      validation-timeout: 3000
+      idle-timeout: 60000
+      connection-init-sql: SET NAMES utf8mb4
     name: mysql
     url: jdbc:mysql://localhost:3306/7project?ullNamePatternMatchesAll=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
