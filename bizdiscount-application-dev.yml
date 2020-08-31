@@ -6,7 +6,7 @@ xxl:
   job:
     admin:
       adress: http://127.0.0.1:8080/xxl-job-admin
-  accessToken:
+    accessToken:
   executor:
     appname: bizdiscout1
     address:
