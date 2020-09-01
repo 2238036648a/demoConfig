@@ -1,7 +1,6 @@
 server:
   port: 8763
 spring:
-  
   redis:
     # 数据库标识，可以配置多个 redis使用不同的标识区分
     database: 0
