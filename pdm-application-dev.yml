@@ -1,6 +1,14 @@
 server:
   port: 8763
 spring:
+  dubbo:
+    application:
+      name: dubboProviderPdm
+    registry: #注册中心配置，用于配置连接注册中心相关信息
+      address: zookeeper://127.0.0.1:2181
+    protocol: #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受
+      name: dubboPdm
+      port: 20882
   redis:
     # 数据库标识，可以配置多个 redis使用不同的标识区分
     database: 0
